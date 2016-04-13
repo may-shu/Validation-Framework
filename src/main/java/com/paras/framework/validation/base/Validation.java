@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * @author Paras.
  */
 
-public class Validation {
+public class Validation implements Cloneable{
 	
 	private static final boolean MANDATORY = false;
     
@@ -159,5 +159,10 @@ public class Validation {
 
 	public void setRegexErrorMessage(String regexErrorMessage) {
 		this.regexErrorMessage = regexErrorMessage;
+	}
+	
+	@Override
+	public Validation clone() throws CloneNotSupportedException {
+		return (Validation) super.clone();
 	}
 }

@@ -20,6 +20,19 @@ public class ValidationFactory {
 	 * List of validators.
 	 */
 	private List<Validator> validators;
+	
+	/**
+	 * Validate an array of validators.
+	 */
+	public static List<Error> validate( Validator ... validators ) {
+		List<Validator> list = new ArrayList<Validator>();
+		
+		for( Validator validator : validators ) {
+			list.add( validator );
+		}
+		
+		return validate( list );
+	}
 
 	/**
 	 * Validate a list of validators.

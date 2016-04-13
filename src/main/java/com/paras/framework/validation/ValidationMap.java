@@ -55,7 +55,15 @@ public class ValidationMap {
      * Get A Validation Type for key.
      */
 	public static Validation getValidation( String key ) {
-		return validationMap.get( key );
+		
+		Validation validation = null;
+		try{
+			validation = validationMap.get( key ).clone();
+		}catch( CloneNotSupportedException ex ) {
+			
+		}
+		
+		return validation;
 	}
 	
     /**
