@@ -6,5 +6,5 @@ package com.paras.framework.validation.base;
  * @Author Paras.
  */
 public enum ValidationCriteria {
-    MANDATORY, REGEX, MIN_LENGTH, MAX_LENGTH
+    MANDATORY, REGEX, MIN_LENGTH, MAX_LENGTH, BUSINESS
 }
